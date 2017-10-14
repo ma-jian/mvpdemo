@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mvpdemo</string>
+
+
+    <string name="text_nodata">没有相关数据</string>
+    <string name="text_error">数据加载失败了....\n 一些可能的原因：\n\t 1.网络异常,请检查网络...\n 2.服务器异常...</string>
+    <string name="web">web</string>
+</resources>
