@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected void initData() {
-
+        mPresenter.attachView(this);
     }
 
     @Override

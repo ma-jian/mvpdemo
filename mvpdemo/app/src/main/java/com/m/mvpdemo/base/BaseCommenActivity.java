@@ -51,7 +51,7 @@ public abstract class BaseCommenActivity<P extends BasePresenter> extends Fragme
 
     public void initLoad() {
         if (mPresenter != null) {
-            mPresenter.attachView(this);
+//            mPresenter.attachView(this);
         }
     }
 

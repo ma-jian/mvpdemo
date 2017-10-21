@@ -19,13 +19,13 @@ import io.reactivex.disposables.Disposable;
  */
 
 public abstract class BasePresenter<M extends IModel, V extends IView> implements IPresenter<V> {
-    private WeakReference mWeakReference;
+    private WeakReference<V> mWeakReference;
     protected V                   mView;
     protected CompositeDisposable mCompositeDisposable;
 
     @Override
     public void attachView(V view) {
-        mWeakReference = new WeakReference(view);
+        mWeakReference = new WeakReference<>(view);
         mView = view;
     }
 
@@ -56,7 +56,7 @@ public abstract class BasePresenter<M extends IModel, V extends IView> implement
     public V getView() {
         if (mWeakReference.get() == null)
             throw new IllegalStateException("view not found");
-        return (V) mWeakReference.get();
+        return mWeakReference.get();
     }
 
 
